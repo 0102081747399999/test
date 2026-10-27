@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+  <meta content="mobile_tab" name="shell-type"/>
+  <title>صيدليتي - البحث والأدوية</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "secondary-container": "#6cf8bb",
+            "on-tertiary-fixed-variant": "#005137",
+            "surface-dim": "#d2d9f4",
+            "surface-container-lowest": "#ffffff",
+            "on-secondary-fixed-variant": "#005236",
+            "inverse-surface": "#283044",
+            "primary-fixed": "#85f8c4",
+            "on-tertiary-container": "#f5fff7",
+            "on-surface": "#131b2e",
+            "on-error": "#ffffff",
+            "inverse-primary": "#68dba9",
+            "inverse-on-surface": "#eef0ff",
+            "outline": "#6d7a72",
+            "on-secondary": "#ffffff",
+            "surface-container-highest": "#dae2fd",
+            "on-secondary-container": "#00714d",
+            "secondary": "#006c49",
+            "primary-fixed-dim": "#68dba9",
+            "on-error-container": "#93000a",
+            "secondary-fixed-dim": "#4edea3",
+            "surface-bright": "#faf8ff",
+            "surface-variant": "#dae2fd",
+            "on-primary-fixed-variant": "#005137",
+            "on-primary-container": "#f5fff7",
+            "surface-tint": "#006c4a",
+            "tertiary-fixed-dim": "#45dfa4",
+            "on-surface-variant": "#3d4a42",
+            "secondary-fixed": "#6ffbbe",
+            "tertiary-container": "#00855d",
+            "on-primary": "#ffffff",
+            "outline-variant": "#bccac0",
+            "background": "#faf8ff",
+            "error-container": "#ffdad6",
+            "primary-container": "#00855d",
+            "on-tertiary": "#ffffff",
+            "surface": "#faf8ff",
+            "surface-container": "#eaedff",
+            "surface-container-high": "#e2e7ff",
+            "tertiary-fixed": "#68fcbf",
+            "on-secondary-fixed": "#002113",
+            "surface-container-low": "#f2f3ff",
+            "on-background": "#131b2e",
+            "on-primary-fixed": "#002114",
+            "tertiary": "#006949",
+            "on-tertiary-fixed": "#002114",
+            "error": "#ba1a1a",
+            "primary": "#006948"
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          spacing: {
+            "margin": "1.25rem",
+            "gutter-mobile": "0.75rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "margin-mobile": "1rem",
+            "gutter": "1rem",
+            "space-xl": "2rem",
+            "space-xs": "0.25rem",
+            "space-lg": "1.5rem"
+          },
+          fontFamily: {
+            "headline-md": ["Alexandria"],
+            "label-lg": ["Alexandria"],
+            "display-lg-mobile": ["Alexandria"],
+            "label-md": ["Alexandria"],
+            "body-sm": ["Alexandria"],
+            "display-lg": ["Alexandria"],
+            "body-md": ["Alexandria"],
+            "body-lg": ["Alexandria"],
+            "label-sm": ["Alexandria"],
+            "headline-sm": ["Alexandria"],
+            "headline-lg": ["Alexandria"]
+          },
+          fontSize: {
+            "headline-md": ["20px", { "lineHeight": "30px", "fontWeight": "600" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+            "display-lg-mobile": ["26px", { "lineHeight": "36px", "fontWeight": "700" }],
+            "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "600" }],
+            "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }],
+            "display-lg": ["32px", { "lineHeight": "44px", "fontWeight": "700" }],
+            "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }],
+            "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "fontWeight": "500" }],
+            "headline-sm": ["18px", { "lineHeight": "26px", "fontWeight": "600" }],
+            "headline-lg": ["24px", { "lineHeight": "34px", "fontWeight": "600" }]
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen selection:bg-secondary-container">
+  <!-- Top Navigation Header -->
+  <header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_4px_20px_-4px_rgba(0,105,72,0.07)]">
+    <div class="h-20 px-margin flex items-center justify-between gap-space-sm">
+      <div class="flex items-center gap-space-sm cursor-pointer" onclick="window.location.href='index.html'">
+        <img alt="صيدليتي" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANMRCCqCKrEl2Ix0h_70v3RIy-CmPJbVA5bsNhqMzBgmP5D7EgXIuhj5XyK2sF4cK7NgGLPdDDUbO8E1qskwiFmLoEVj76e-k51yLXgwK0mbI6IJuCZ3xEBe0ugdkDxdWJCPom6XdZFElFYrteRQzzxLTRROeGtq0ybZlUnrNJmEK97wni0CZ2n2fhaj4G87AytdeEUoSYcLjRqDKbBR8BdlBkCpxVTjuhxsMbiKV2zovkRsiDLJdg"/>
+        <div class="flex flex-col">
+          <span class="text-label-sm font-label-sm text-primary font-bold">صيدليتي</span>
+          <span class="text-headline-sm font-headline-sm text-on-surface">البحث والأدوية</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-space-xs">
+        <div class="hidden sm:flex items-center gap-1 bg-surface-container-low px-3 py-1.5 rounded-full text-on-surface-variant cursor-pointer hover:bg-surface-container transition-colors" title="تغيير العنوان">
+          <span class="material-symbols-outlined text-[16px] text-primary">location_on</span>
+          <span class="text-label-sm font-label-sm truncate max-w-[130px]">الرياض، حي النخيل</span>
+        </div>
+        <button aria-label="التنبيهات" class="w-11 h-11 flex items-center justify-center rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container-high transition-colors relative" type="button">
+          <span class="material-symbols-outlined text-[22px]">notifications</span>
+          <span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-error"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex flex-col relative w-full pt-20 pb-28 bg-surface px-margin-mobile min-h-screen">
+    <div class="flex flex-col w-full pb-6 gap-space-md">
+      
+      <!-- Search & Barcode Action Area -->
+      <div class="flex flex-col gap-space-sm">
+        <div class="relative flex items-center w-full shadow-[0_4px_16px_rgba(0,105,72,0.06)] rounded-2xl bg-surface-container-lowest">
+          <div class="absolute right-3.5 flex items-center justify-center text-primary pointer-events-none">
+            <span class="material-symbols-outlined text-[24px]">search</span>
+          </div>
+          <input class="w-full h-14 pr-12 pl-24 bg-transparent font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none rounded-2xl" id="search-input" placeholder="ابحث عن دواء، أعراض، فيتامينات..." type="search"/>
+          <div class="absolute left-2.5 flex items-center gap-1">
+            <button aria-label="مسح الباركود أو الوصفة الطبية" class="w-9 h-9 flex items-center justify-center rounded-xl bg-secondary-container text-on-secondary-container transition-transform active:scale-95 shadow-sm" type="button">
+              <span class="material-symbols-outlined text-[20px]">document_scanner</span>
+            </button>
+            <button aria-label="تصفية النتائج" class="w-9 h-9 flex items-center justify-center rounded-xl bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors active:scale-95" id="filter-toggle-btn" type="button">
+              <span class="material-symbols-outlined text-[20px]">tune</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Collapsible Advanced Filter Drawer Preview -->
+        <div class="hidden flex-col gap-space-sm p-4 rounded-2xl bg-surface-container-lowest shadow-sm transition-all duration-300" id="filter-options-sheet">
+          <div class="flex items-center justify-between">
+            <span class="font-label-lg text-label-lg text-on-surface font-bold">خيارات التصفية السريرية</span>
+            <button class="text-label-sm font-label-sm text-outline hover:text-on-surface" id="close-filter-sheet-btn" type="button">إغلاق</button>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-1">
+            <label class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-surface-container-low text-label-sm font-label-sm cursor-pointer select-none">
+              <input checked="" class="accent-primary w-4 h-4 rounded" type="checkbox"/>
+              <span>متوفر فقط في المخزون المحلي</span>
+            </label>
+            <label class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-surface-container-low text-label-sm font-label-sm cursor-pointer select-none">
+              <input class="accent-primary w-4 h-4 rounded" type="checkbox"/>
+              <span>أدوية بدون وصفة (OTC) فقط</span>
+            </label>
+            <label class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-surface-container-low text-label-sm font-label-sm cursor-pointer select-none">
+              <input class="accent-primary w-4 h-4 rounded" type="checkbox"/>
+              <span>عروض التوصيل فائق السرعة ⚡</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Quick Horizontal Categorical Chips -->
+        <div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1 -mx-margin-mobile px-margin-mobile">
+          <button class="chip-filter flex-shrink-0 px-4 py-2 rounded-full font-label-sm text-label-sm transition-all active:scale-95 bg-primary text-on-primary shadow-sm" data-filter="all" type="button">
+            الكل (24)
+          </button>
+          <button class="chip-filter flex-shrink-0 px-4 py-2 rounded-full font-label-sm text-label-sm transition-all active:scale-95 bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container shadow-[0_2px_8px_-2px_rgba(15,23,42,0.04)]" data-filter="otc" type="button">
+            بدون وصفة (OTC)
+          </button>
+          <button class="chip-filter flex-shrink-0 px-4 py-2 rounded-full font-label-sm text-label-sm transition-all active:scale-95 bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container shadow-[0_2px_8px_-2px_rgba(15,23,42,0.04)]" data-filter="vitamins" type="button">
+            فيتامينات ومكملات
+          </button>
+          <button class="chip-filter flex-shrink-0 px-4 py-2 rounded-full font-label-sm text-label-sm transition-all active:scale-95 bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container shadow-[0_2px_8px_-2px_rgba(15,23,42,0.04)]" data-filter="painkillers" type="button">
+            مسكنات الألم
+          </button>
+          <button class="chip-filter flex-shrink-0 px-4 py-2 rounded-full font-label-sm text-label-sm transition-all active:scale-95 bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container shadow-[0_2px_8px_-2px_rgba(15,23,42,0.04)]" data-filter="antibiotics" type="button">
+            مضادات حيوية
+          </button>
+          <button class="chip-filter flex-shrink-0 px-4 py-2 rounded-full font-label-sm text-label-sm transition-all active:scale-95 bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container shadow-[0_2px_8px_-2px_rgba(15,23,42,0.04)]" data-filter="bestseller" type="button">
+            الأكثر مبيعاً ⭐
+          </button>
+        </div>
+      </div>
+
+      <!-- Prescription Fast Track Banner -->
+      <div class="relative overflow-hidden flex items-center justify-between p-4 rounded-2xl bg-gradient-to-l from-primary/10 via-surface-container to-secondary-container/20 shadow-sm">
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 rounded-xl bg-primary text-on-primary flex items-center justify-center flex-shrink-0 shadow-sm">
+            <span class="material-symbols-outlined text-[26px]">prescriptions</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-headline-sm text-headline-sm text-on-surface leading-snug font-bold">معك وصفة طبية (روشتة)؟</span>
+            <span class="font-body-sm text-body-sm text-on-surface-variant">صوّرها وسيقوم الصيدلي بصرفها فوراً</span>
+          </div>
+        </div>
+        <button class="px-3.5 py-2 rounded-xl bg-primary text-on-primary font-label-sm text-label-sm font-semibold flex items-center gap-1 active:scale-95 transition-all shadow-sm flex-shrink-0" onclick="PharmacyApp.openPrescriptionModal()" type="button">
+          <span>رفع الآن</span>
+          <span class="material-symbols-outlined text-[16px]">arrow_back</span>
+        </button>
+      </div>
+
+      <!-- Results Count & Sorting Summary -->
+      <div class="flex items-center justify-between pt-1">
+        <div class="flex items-center gap-1.5">
+          <span class="font-headline-sm text-headline-sm text-on-surface font-bold">نتائج البحث والأدوية</span>
+          <span class="px-2 py-0.5 rounded-full bg-surface-container-high font-label-sm text-label-sm text-primary font-bold">(6 أصناف رئيسية)</span>
+        </div>
+        <div class="flex items-center gap-1 text-on-surface-variant">
+          <span class="material-symbols-outlined text-[18px]">sort</span>
+          <select class="bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none cursor-pointer">
+            <option>الأقرب صيدلية</option>
+            <option>الأقل سعراً</option>
+            <option>الأعلى تقييماً</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- 2-Column Product Grid -->
+      <div class="grid grid-cols-2 gap-3" id="products-grid">
+        <!-- Card 1: Panadol Extra -->
+        <div class="flex flex-col justify-between p-3 rounded-2xl bg-surface-container-lowest shadow-[0_2px_12px_-2px_rgba(15,23,42,0.05)] transition-all hover:shadow-[0_8px_20px_-4px_rgba(0,105,72,0.12)] relative">
+          <div class="flex flex-col">
+            <div class="flex items-center justify-between mb-2">
+              <span class="px-2 py-0.5 rounded-full bg-secondary-container/40 text-on-secondary-container font-label-sm text-label-sm font-semibold">
+                متوفر فوراً
+              </span>
+              <button aria-label="أضف للمفضلة" class="w-7 h-7 rounded-full flex items-center justify-center text-outline hover:text-error transition-colors" type="button">
+                <span class="material-symbols-outlined text-[20px]">favorite_border</span>
+              </button>
+            </div>
+            <div class="w-full h-28 rounded-xl bg-surface-container-low overflow-hidden relative mb-2.5 flex items-center justify-center">
+              <img class="w-full h-full object-contain p-2 mix-blend-multiply" alt="Panadol Extra" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFsXPjL18jC4Fmx0KsGTkMpQaWE_pT3SK1ZGc5RDNt-nIbvnkZ7_NKF_w6vy-rex8xWKP-EWTT9VobbhtmJ0e_f8gDMNrMX8P35GbP9uIOnrvA-aTUh8eFq0ZqX1HIAZ_z-sXRSgi7cFkCILpE0CmhhWqb8Q6RVj5czE_0R042tpr8zmuy6ane0ZQpJdUZfJeH3d88u0D9w7uxNa3xRtcZz---YVlXPlORxn0kU3NGlQKmF5CEKwKR"/>
+              <div class="absolute bottom-1 right-1 px-1.5 py-0.5 rounded-md bg-surface-container-lowest/90 backdrop-blur-sm flex items-center gap-0.5 shadow-sm">
+                <span class="material-symbols-outlined text-[14px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="font-label-sm text-label-sm font-bold text-on-surface">4.9</span>
+              </div>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-label-lg text-label-lg text-on-surface line-clamp-1 font-semibold">بنادول إكسترا 500 ملغ</span>
+              <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-0.5">مسكن للألم وخافض حرارة فعال وسريع المفعول</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between pt-3 mt-2 border-t-0">
+            <div class="flex flex-col">
+              <span class="font-headline-sm text-headline-sm text-primary font-bold">18 <span class="font-label-sm text-label-sm text-on-surface-variant font-normal">ر.س</span></span>
+            </div>
+            <button aria-label="إضافة بنادول إكسترا للسلة" class="w-9 h-9 rounded-xl bg-primary text-on-primary flex items-center justify-center transition-all active:scale-90 hover:bg-primary-container shadow-sm" type="button">
+              <span class="material-symbols-outlined text-[20px]">add</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 2: Omega 3 -->
+        <div class="flex flex-col justify-between p-3 rounded-2xl bg-surface-container-lowest shadow-[0_2px_12px_-2px_rgba(15,23,42,0.05)] transition-all hover:shadow-[0_8px_20px_-4px_rgba(0,105,72,0.12)] relative">
+          <div class="flex flex-col">
+            <div class="flex items-center justify-between mb-2">
+              <span class="px-2 py-0.5 rounded-full bg-secondary-container/40 text-on-secondary-container font-label-sm text-label-sm font-semibold">
+                مكمل نقي
+              </span>
+              <button aria-label="أضف للمفضلة" class="w-7 h-7 rounded-full flex items-center justify-center text-outline hover:text-error transition-colors" type="button">
+                <span class="material-symbols-outlined text-[20px]">favorite_border</span>
+              </button>
+            </div>
+            <div class="w-full h-28 rounded-xl bg-surface-container-low overflow-hidden relative mb-2.5 flex items-center justify-center">
+              <img class="w-full h-full object-contain p-2 mix-blend-multiply" alt="Omega 3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhUYIuG6C3F68kv5-uqFFh194AfmzInVZxQ3axxrxZmAOz5JgG3YUAZcYHnWUuVBlIS00QXosegtpsTa5p1kwZO2LVPPXI7VIwqgFBQSGYfm3pF6vfOQCaWUdZxgakj5m3CzkhCRzsQEjDMO7dnKw_18zdMU04fHtm-6eAiXKHc8Xe6cuPyhLSNGgAuaJhBN3sf-bpZk21Nv8lreCuikLqQNsdHF5E0jQrCTvaxv0rDr-rQ0a4-ZYb"/>
+              <div class="absolute bottom-1 right-1 px-1.5 py-0.5 rounded-md bg-surface-container-lowest/90 backdrop-blur-sm flex items-center gap-0.5 shadow-sm">
+                <span class="material-symbols-outlined text-[14px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="font-label-sm text-label-sm font-bold text-on-surface">4.8</span>
+              </div>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-label-lg text-label-lg text-on-surface line-clamp-1 font-semibold">أوميغا 3 زيت سمك 1000 ملغ</span>
+              <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-0.5">مكمل غذائي غني بـ EPA و DHA لدعم صحة القلب</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between pt-3 mt-2 border-t-0">
+            <div class="flex flex-col">
+              <span class="font-headline-sm text-headline-sm text-primary font-bold">65 <span class="font-label-sm text-label-sm text-on-surface-variant font-normal">ر.س</span></span>
+            </div>
+            <button aria-label="إضافة أوميغا 3 للسلة" class="w-9 h-9 rounded-xl bg-primary text-on-primary flex items-center justify-center transition-all active:scale-90 hover:bg-primary-container shadow-sm" type="button">
+              <span class="material-symbols-outlined text-[20px]">add</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 3: Vitamin C Effervescent -->
+        <div class="flex flex-col justify-between p-3 rounded-2xl bg-surface-container-lowest shadow-[0_2px_12px_-2px_rgba(15,23,42,0.05)] transition-all hover:shadow-[0_8px_20px_-4px_rgba(0,105,72,0.12)] relative">
+          <div class="flex flex-col">
+            <div class="flex items-center justify-between mb-2">
+              <span class="px-2 py-0.5 rounded-full bg-secondary-container/40 text-on-secondary-container font-label-sm text-label-sm font-semibold">
+                الأكثر طلباً
+              </span>
+              <button aria-label="أضف للمفضلة" class="w-7 h-7 rounded-full flex items-center justify-center text-outline hover:text-error transition-colors" type="button">
+                <span class="material-symbols-outlined text-[20px]">favorite_border</span>
+              </button>
+            </div>
+            <div class="w-full h-28 rounded-xl bg-surface-container-low overflow-hidden relative mb-2.5 flex items-center justify-center">
+              <img class="w-full h-full object-contain p-2 mix-blend-multiply" alt="Vitamin C" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZjVkgRH5xTuM9rS-u4SFpZNeRmJnaDW_rJQkszpo_u0vfhmhZ2WTF2NCY7mDAPw1uk_nS3rgCf2SyiqqG9UTlsIVbOvRC3wJ6s2A1AsnwPL50vmlAt03R5WlBsMene_Yz57-xU4p1ALP_qHuOSGZPOVK64rxI3YM_Xy14FIjQbF4o4WTxelJSm4JsxdTjqNuu9YkDc5doLcz8IGvrTPiBFWrxo3zG5Jog7p-VfDoWkma0ISIvLp6h"/>
+              <div class="absolute bottom-1 right-1 px-1.5 py-0.5 rounded-md bg-surface-container-lowest/90 backdrop-blur-sm flex items-center gap-0.5 shadow-sm">
+                <span class="material-symbols-outlined text-[14px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="font-label-sm text-label-sm font-bold text-on-surface">4.7</span>
+              </div>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-label-lg text-label-lg text-on-surface line-clamp-1 font-semibold">فيتامين سي 1000 ملغ فوار</span>
+              <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-0.5">تعزيز المناعة اليومية والحماية المضادة للأكسدة</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between pt-3 mt-2 border-t-0">
+            <div class="flex flex-col">
+              <span class="font-headline-sm text-headline-sm text-primary font-bold">24 <span class="font-label-sm text-label-sm text-on-surface-variant font-normal">ر.س</span></span>
+            </div>
+            <button aria-label="إضافة فيتامين سي للسلة" class="w-9 h-9 rounded-xl bg-primary text-on-primary flex items-center justify-center transition-all active:scale-90 hover:bg-primary-container shadow-sm" type="button">
+              <span class="material-symbols-outlined text-[20px]">add</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 4: Augmentin (Rx Prescription Required) -->
+        <div class="flex flex-col justify-between p-3 rounded-2xl bg-surface-container-lowest shadow-[0_2px_12px_-2px_rgba(15,23,42,0.05)] transition-all hover:shadow-[0_8px_20px_-4px_rgba(0,105,72,0.12)] relative">
+          <div class="flex flex-col">
+            <div class="flex items-center justify-between mb-2">
+              <span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold flex items-center gap-1">
+                <span class="material-symbols-outlined text-[14px]">prescriptions</span>
+                وصفة طبية
+              </span>
+              <button aria-label="أضف للمفضلة" class="w-7 h-7 rounded-full flex items-center justify-center text-outline hover:text-error transition-colors" type="button">
+                <span class="material-symbols-outlined text-[20px]">favorite_border</span>
+              </button>
+            </div>
+            <div class="w-full h-28 rounded-xl bg-surface-container-low overflow-hidden relative mb-2.5 flex items-center justify-center">
+              <img class="w-full h-full object-contain p-2 mix-blend-multiply" alt="Augmentin" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4enKzu5hoP217v_Jh7RPa83c8sJ-HKmWW0FWU_WFL_SBdePzZMzkd-GDNEiKTbEVgFqzg911QIQWZFq65Ejv0IDe-MDX32wTUxy8gbVVCQcjBQkZgUZ8Mo0DQKpNXGPsW93sDXjKQvUHD6NgGqh4jsHTygNxBgCS-6jrNYqtA2rR3EOP0WjP--dwjwuPx3KPPAvKeBtoHM2-FSwhP_lGZd1cY3nZv-6K9dLUY6XCABLwsaLJrf6nE"/>
+              <div class="absolute bottom-1 right-1 px-1.5 py-0.5 rounded-md bg-surface-container-lowest/90 backdrop-blur-sm flex items-center gap-0.5 shadow-sm">
+                <span class="material-symbols-outlined text-[14px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="font-label-sm text-label-sm font-bold text-on-surface">4.9</span>
+              </div>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-label-lg text-label-lg text-on-surface line-clamp-1 font-semibold">أوغمنتين 1 جم</span>
+              <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-0.5">مضاد حيوي واسع المجال - يتطلب وصفة معتمدة</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between pt-3 mt-2 border-t-0">
+            <div class="flex flex-col">
+              <span class="font-headline-sm text-headline-sm text-primary font-bold">45 <span class="font-label-sm text-label-sm text-on-surface-variant font-normal">ر.س</span></span>
+            </div>
+            <button aria-label="طلب عبر الوصفة أوغمنتين" class="px-2.5 py-1.5 rounded-xl bg-surface-container text-primary font-label-sm text-label-sm font-bold flex items-center gap-1 active:scale-95 transition-all" type="button">
+              <span class="material-symbols-outlined text-[16px]">upload_file</span>
+              <span>طلب</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 5: Refresh Plus Eye Drops -->
+        <div class="flex flex-col justify-between p-3 rounded-2xl bg-surface-container-lowest shadow-[0_2px_12px_-2px_rgba(15,23,42,0.05)] transition-all hover:shadow-[0_8px_20px_-4px_rgba(0,105,72,0.12)] relative">
+          <div class="flex flex-col">
+            <div class="flex items-center justify-between mb-2">
+              <span class="px-2 py-0.5 rounded-full bg-secondary-container/40 text-on-secondary-container font-label-sm text-label-sm font-semibold">
+                خالٍ من المواد الحافظة
+              </span>
+              <button aria-label="أضف للمفضلة" class="w-7 h-7 rounded-full flex items-center justify-center text-outline hover:text-error transition-colors" type="button">
+                <span class="material-symbols-outlined text-[20px]">favorite_border</span>
+              </button>
+            </div>
+            <div class="w-full h-28 rounded-xl bg-surface-container-low overflow-hidden relative mb-2.5 flex items-center justify-center">
+              <img class="w-full h-full object-contain p-2 mix-blend-multiply" alt="Refresh Plus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZHQb_cYxki6x7NwzpQ_2rnRIGylmRXIfCWV9IG9tQZiSDO2XHJBL1hLJ_rOSh1mxlb7izuUxcXgWDtFH_2rojHTSbC6Q2TqZF3wSchCKG4U5xzYCry7oujLLPVOV13GjNZrwcNCW0991nXdMUjaOcxtVLlfw8iiOsuSnQR0yW4qXu_Jy-Ehs-3j1gLb2fV6h8PH2AGZqm3vPc_mgbWzlNyPX9GgKb46mky2M6iX-4ECv-GjBpRQEb"/>
+              <div class="absolute bottom-1 right-1 px-1.5 py-0.5 rounded-md bg-surface-container-lowest/90 backdrop-blur-sm flex items-center gap-0.5 shadow-sm">
+                <span class="material-symbols-outlined text-[14px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="font-label-sm text-label-sm font-bold text-on-surface">4.6</span>
+              </div>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-label-lg text-label-lg text-on-surface line-clamp-1 font-semibold">ريفريش بلس قطرة مرطبة</span>
+              <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-0.5">ترطيب وراحة فورية لجفاف وإجهاد العين اليومي</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between pt-3 mt-2 border-t-0">
+            <div class="flex flex-col">
+              <span class="font-headline-sm text-headline-sm text-primary font-bold">32 <span class="font-label-sm text-label-sm text-on-surface-variant font-normal">ر.س</span></span>
+            </div>
+            <button aria-label="إضافة ريفريش بلس للسلة" class="w-9 h-9 rounded-xl bg-primary text-on-primary flex items-center justify-center transition-all active:scale-90 hover:bg-primary-container shadow-sm" type="button">
+              <span class="material-symbols-outlined text-[20px]">add</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 6: Accu-Chek Blood Glucose Monitor -->
+        <div class="flex flex-col justify-between p-3 rounded-2xl bg-surface-container-lowest shadow-[0_2px_12px_-2px_rgba(15,23,42,0.05)] transition-all hover:shadow-[0_8px_20px_-4px_rgba(0,105,72,0.12)] relative">
+          <div class="flex flex-col">
+            <div class="flex items-center justify-between mb-2">
+              <span class="px-2 py-0.5 rounded-full bg-secondary-container/40 text-on-secondary-container font-label-sm text-label-sm font-semibold">
+                جهاز طبي معتمد
+              </span>
+              <button aria-label="أضف للمفضلة" class="w-7 h-7 rounded-full flex items-center justify-center text-outline hover:text-error transition-colors" type="button">
+                <span class="material-symbols-outlined text-[20px]">favorite_border</span>
+              </button>
+            </div>
+            <div class="w-full h-28 rounded-xl bg-surface-container-low overflow-hidden relative mb-2.5 flex items-center justify-center">
+              <img class="w-full h-full object-contain p-2 mix-blend-multiply" alt="Accu Chek" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXc5pHHWbOXCr64EeP5HsgbxXwH6-uAFuEwU_47pi7z4I4A-hE3RPZZVUF76-zar84N8h5hS0nbgvcEm_JQ1IGpAzjMU582cWbZgyQc5d5hHgXsZWfwUNr3cK-KsbyW8lumnbbuoDDftGl7QFSJTh9NAUpx-EBOx2dEVVGT5GEWptxs8ldUAPciB_QjswyNVZ6CqsNOZxjFvv_ycJmsJW50IC6GhEsgP8l651JzyDHf0QTiHp1tunK"/>
+              <div class="absolute bottom-1 right-1 px-1.5 py-0.5 rounded-md bg-surface-container-lowest/90 backdrop-blur-sm flex items-center gap-0.5 shadow-sm">
+                <span class="material-symbols-outlined text-[14px] text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="font-label-sm text-label-sm font-bold text-on-surface">5.0</span>
+              </div>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-label-lg text-label-lg text-on-surface line-clamp-1 font-semibold">جهاز سكر أكيو تشيك</span>
+              <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-0.5">دقة طبية فائقة ونتائج فورية خلال 5 ثوانٍ فقط</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between pt-3 mt-2 border-t-0">
+            <div class="flex flex-col">
+              <span class="font-headline-sm text-headline-sm text-primary font-bold">110 <span class="font-label-sm text-label-sm text-on-surface-variant font-normal">ر.س</span></span>
+            </div>
+            <button aria-label="إضافة جهاز السكر للسلة" class="w-9 h-9 rounded-xl bg-primary text-on-primary flex items-center justify-center transition-all active:scale-90 hover:bg-primary-container shadow-sm" type="button">
+              <span class="material-symbols-outlined text-[20px]">add</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Pharmacist Instant Consultation Banner -->
+      <div class="mt-2 p-4 rounded-2xl bg-surface-container-lowest shadow-[0_2px_12px_-2px_rgba(15,23,42,0.05)] flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="relative">
+            <div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+              <span class="material-symbols-outlined text-[26px]">support_agent</span>
+            </div>
+            <span class="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full bg-secondary-fixed ring-2 ring-surface-container-lowest"></span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-headline-sm text-headline-sm text-on-surface font-bold">استشر صيدلي معتمد</span>
+            <span class="font-body-sm text-body-sm text-on-surface-variant">متاح للإجابة عن تداخلات الأدوية والجرعات</span>
+          </div>
+        </div>
+        <button class="px-3.5 py-2 rounded-xl bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold flex items-center gap-1 active:scale-95 transition-transform" onclick="PharmacyApp.openPharmacistChat()" type="button">
+          <span class="material-symbols-outlined text-[18px]">chat</span>
+          <span>محادثة</span>
+        </button>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Bottom Navigation -->
+  <nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-4px_24px_rgba(0,105,72,0.08)]"></nav>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
